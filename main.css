@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+    
+
+body {
+    padding: 5% 25%;
+    background-color: #5d5d5d5d;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+h1 {
+    font-size: 4em;
+    color: #181818;
+}
+h3 {
+    font-size: 1.17em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.line {
+    height: 0.1vh;
+    width: 100%;
+    background-color: #181818;
+    margin-bottom: 1vh;
+    transition: 0.5s;
+}
+.ul {
+    list-style: none;
+    color: #181818;
+    cursor: pointer;
+}
+.ul:hover {
+    color: #2B78E7;
+}
+.li {
+    font-size: 2em;
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.container2 {
+    height: 7vh;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.container2:hover {
+    height: 50vh;
+    cursor: pointer;
+}
+.container2:hover .meme {
+    display: block;
+}
+.container2:hover h3::after {
+    content: url('cross.png');
+}
+h3::after {
+    content: url('plus.png');
+    transition: 1s;
+}
+.meme {
+    display: none;
+    width: 60%;
+    height: 70%;
+    margin: 3% 0;
+    background-color: #181818;
+    transition: 1s;
+    margin-left: 15%;
+    cursor: pointer;
+}
+#inp1 {
+    display: none;
+  }
+  #inp2 {
+    display: none;
+  }
+  #inp3 {
+    display: none;
+  }
+  #inp4 {
+    display: none;
+  }
+  #inp5 {
+    display: none;
+  }
+input:checked + .container2 {
+    height: 50vh;
+}
+input:checked + .container2 h3 {
+    color: #181818;
+}
+input:checked + .container2 .meme {
+    display: block;
+}
+input:checked + .container2 h3::after {
+    content: url('cross.png');
+}
+@media only screen and (max-width: 660px) {
+    h1 {
+        font-size: 3em;
+    }
+    .ul {
+        color: black;
+        font-size: 0.7em;
+    }
+    body {
+        padding: 5% 20%;
+        background-color: #181818;
+    }
+    .line {
+        margin-bottom: 0.5vh;
+    }
+    .container2 {
+        height: 5vh;
+    }
+    .container2:hover {
+        height: 30vh;
+    }
+    input:checked + .container2 {
+        height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 2em;
+    }
+    .ul {
+        color: black;
+        font-size: 0.5em;
+    }
+    body {
+        padding: 5% 15%;
+        background-color: #181818;
+    }
+    .line {
+        margin-bottom: 0.5vh;
+    }
+    .container2 {
+        height: 5vh;
+    }
+    .container2:hover {
+        height: 30vh;
+    }
+    input:checked + .container2 {
+        height: 30vh;
+    }
+}
